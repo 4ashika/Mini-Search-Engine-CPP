@@ -1,0 +1,13 @@
+Abstract
+This work comprehensively investigates the characteristic footprints of optimal
+layer conguration and bandgap-gradient on the performance of CIGS-based
+thin-lm solar cell (TFSC), by employing SCAPS-1D software. Our results
+determine that the W-shaped bandgap prole yields the highest eciency, followed by back-graded, V-shaped and eventually front-graded bandgap gradient
+across the vertically-stepped absorber layer. Our simulations yields a novel Cdfree [Al/FTO/SnS2/W-shaped stepped CIGS/V2O5/Ni] solar cell conguration
+having a remarkable eciency of 32.49 %. Markedly, the stability of ungraded
+CIGS-based TFSCs is more than its graded counterpart under the impact of
+increasing defect density and operating temperature. The performance parameters of the graded CIGS TFSC having absorber layer thickness of 1.5 µm is
+comparable to its ungraded equivalent having a lower absorber width of 1.3 µm.
+Hence, our ndings uniquely demonstrates the greater potential of ungraded
+absorber layer over its graded analogue in enhancing the cost-eectiveness and
+device-lifetime of the CIGS-based TFSCs.
