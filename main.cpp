@@ -6,7 +6,7 @@ int main() {
     MiniSearch engine;
     engine.loadDatasets("./datasets");
 
-    std::string query = "lo"; // Test with a prefix
+    std::string query = "t"; // Test with a prefix
     std::cout << "User is typing: " << query << "..." << std::endl;
     
     engine.autocomplete(query); 
