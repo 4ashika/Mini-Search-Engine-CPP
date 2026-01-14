@@ -1,4 +1,5 @@
 #include "minisearch.h"
+#include "trie.h"
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -21,7 +22,7 @@ void MiniSearch::loadDatasets(std::string path) {
     for (const auto& entry : fs::directory_iterator(path)) {
         if (entry.is_regular_file()) {
             totalDocs++;
-            
+
             std::string fileName = entry.path().filename().string();
             std::ifstream file(entry.path());
             std::string word;
@@ -31,6 +32,7 @@ void MiniSearch::loadDatasets(std::string path) {
                 if (!cleaned.empty()) {
                     // This increments the count for this word in this specific file
                     invertedIndex[cleaned][fileName]++;
+                    suggestor.insert(cleaned);
                 }
             }
         }
@@ -63,5 +65,25 @@ void MiniSearch::search(std::string query) {
     std::cout << "\nRanked Results for '" << query << "':" << std::endl;
     for (const auto& res : results) {
         printf("- %-15s | Score: %.4f\n", res.fileName.c_str(), res.score);
+    }
+}
+
+void MiniSearch::autocomplete(std::string partial) {
+    // 1. Clean the input (lowercase it)
+    std::string cleaned = cleanWord(partial);
+    
+    if (cleaned.empty()) return;
+
+    // 2. Query the Trie suggestor
+    std::vector<std::string> suggestions = suggestor.getSuggestions(cleaned);
+
+    // 3. Display results
+    if (suggestions.empty()) {
+        std::cout << "No suggestions found for '" << partial << "'" << std::endl;
+    } else {
+        std::cout << "\n--- Suggestions for '" << partial << "' ---" << std::endl;
+        for (size_t i = 0; i < suggestions.size() && i < 5; ++i) { // Limit to top 5
+            std::cout << "  > " << suggestions[i] << std::endl;
+        }
     }
 }

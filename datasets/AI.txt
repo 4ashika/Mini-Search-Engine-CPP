@@ -1,8 +1,100 @@
 Artificial intelligence (AI) has increasingly become part of everyday life over the past decade.
+
 It is being used to personalise social media feeds, spot friends and family in smartphone photos and pave the way for medical breakthroughs.
+
 But the rise of chatbots like OpenAI's ChatGPT and Meta AI has been accompanied by concern about the technology's environmental impact, ethical implications and data use.
 
 What is AI and what is it used for?
+
 AI allows computers to process large amounts of data, identify patterns and follow detailed instructions about what to do with that information.
+
 Computers cannot think, empathise or reason.
+
 However, scientists have developed systems that can perform tasks which usually require human intelligence, trying to replicate how people acquire and use knowledge.
+
+This could be trying to anticipate what product an online shopper might buy, based on previous purchases, in order to recommend items.
+
+The technology is also behind voice-controlled virtual assistants like Apple's Siri and Amazon's Alexa, and is being used to develop systems for self-driving cars.
+
+AI also helps social platforms like Facebook, TikTok and X decide what posts to show users. Streaming services Spotify and Deezer use AI to suggest music.
+
+There are also a number of applications in medicine, as scientists use AI to help spot cancers, review X-ray results, speed up diagnoses and identify new treatments.
+
+What is generative AI, and how do apps like ChatGPT and Meta AI work?
+Generative AI is used to create new content which can seem like it has been made by a human.
+
+It does this by learning from vast quantities of existing data such as online text and images.
+
+ChatGPT and Chinese rival DeepSeek's chatbot are popular generative AI tools that can be used to produce text, images, code and more material.
+
+Google's Gemini or Meta AI can similarly hold text conversations with users.
+
+Apps like Midjourney or Veo 3 are dedicated to creating images or video from simple text prompts.
+
+Why is AI controversial?
+While acknowledging AI's potential, some experts are worried about the implications of its rapid growth.
+
+The International Monetary Fund (IMF) has warned AI could affect nearly 40% of jobs, and worsen global financial inequality.
+
+Prof Geoffrey Hinton, a computer scientist regarded as one of the "godfathers" of AI development, has expressed concern that powerful AI systems could even make humans extinct - although his fear was dismissed by his fellow "AI godfather", Yann LeCun.
+
+Critics also highlight the tech's potential to reproduce biased information, or discriminate against some social groups.
+
+This is because much of the data used to train AI comes from public material, including social media posts or comments, which can reflect existing societal biases such as sexism or racism.
+
+Facebook apology as AI labels black men 'primates'
+Twitter finds racial bias in image-cropping AI
+And while AI programmes are growing more adept, they are still prone to errors - such as creating images of people with the wrong number of fingers or limbs.
+
+Generative AI systems are known for their ability to "hallucinate" and assert falsehoods as fact, even sometimes inventing sources for the inaccurate information.
+
+Apple halted a new AI feature in January after it incorrectly summarised news app notifications.
+
+The BBC complained about the feature after Apple's AI falsely told readers that Luigi Mangione - the man accused of killing UnitedHealthcare CEO Brian Thompson - had shot himself.
+
+Google has also faced criticism over inaccurate answers produced by its AI search overviews.
+
+Google launches new AI search feature in UK
+This has added to concerns about the use of AI in schools and workplaces, where it is increasingly used to help summarise texts, write emails or essays and solve bugs in code.
+
+There are worries about students using AI technology to "cheat" on assignments, or employees "smuggling" it into work.
+
+'I'm being paid to fix issues caused by AI'
+
+Writers, musicians and artists have also pushed back against the technology on ethical grounds, accusing AI developers of using their work to train systems without consent or compensation.
+
+Thousands of creators - including Abba singer-songwriter Björn Ulvaeus, writers Ian Rankin and Joanne Harris and actress Julianne Moore - signed a statement in October 2024 calling AI a "major, unjust threat" to their livelihoods.
+
+How does AI effect the environment?
+It is not clear how much energy AI systems use, but some researchers estimate the industry as a whole could soon consume as much as the Netherlands.
+
+Creating the powerful computer chips needed to run AI programmes requires lots of power and water.
+
+Demand for generative AI services has also meant an increase in the number of data centres which power them.
+
+These huge halls - housing thousands of racks of computer servers - use substantial amounts of energy and require large volumes of water to keep them cool.
+
+Some large tech companies have invested in ways to reduce or reuse the water needed, or have opted for alternative methods such as air-cooling.
+
+However, some experts and activists fear that AI will worsen water supply problems.
+
+The BBC was told in February that government plans to make the UK a "world leader" in AI could put already stretched supplies of drinking water under strain.
+
+In September 2024, Google said it would reconsider proposals for a data centre in Chile, which has struggled with drought.
+
+Are there laws governing AI?
+Some governments have already introduced rules governing how AI operates.
+
+The EU's Artificial Intelligence Act places controls on high risk systems used in areas such as education, healthcare, law enforcement or elections. It bans some AI use altogether.
+
+Generative AI developers in China are required to safeguard citizens' data, and promote transparency and accuracy of information. But they are also bound by the country's strict censorship laws.
+
+In the UK, Prime Minister Sir Keir Starmer has said the government "will test and understand AI before we regulate it".
+
+Both the UK and US have AI Safety Institutes that aim to identify risks and evaluate advanced AI models.
+
+In 2024 the two countries signed an agreement to collaborate on developing "robust" AI testing methods.
+
+However, in February 2025, neither country signed an international AI declaration which pledged an open, inclusive and sustainable approach to the technology.
+
+Several countries including the UK are also clamping down on use of AI systems to create deepfake nude imagery and child sexual abuse material.
