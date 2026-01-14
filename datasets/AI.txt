@@ -1,0 +1,8 @@
+Artificial intelligence (AI) has increasingly become part of everyday life over the past decade.
+It is being used to personalise social media feeds, spot friends and family in smartphone photos and pave the way for medical breakthroughs.
+But the rise of chatbots like OpenAI's ChatGPT and Meta AI has been accompanied by concern about the technology's environmental impact, ethical implications and data use.
+
+What is AI and what is it used for?
+AI allows computers to process large amounts of data, identify patterns and follow detailed instructions about what to do with that information.
+Computers cannot think, empathise or reason.
+However, scientists have developed systems that can perform tasks which usually require human intelligence, trying to replicate how people acquire and use knowledge.

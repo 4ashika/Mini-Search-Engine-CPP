@@ -1,22 +1,20 @@
-#ifndef MINISEARCH_H
-#define MINISEARCH_H
-
+#include <unordered_map>
+#include <map>
 #include <string>
-#include <vector>
-#include <set>
-#include <filesystem>
+#include <cmath>
 
-class MiniSearch
-{
-public:
-  // Reads all files in the directory
-  void loadDatasets(std::string path);
-
-  // Cleans words (removes symbols, lowercase)
-  std::string cleanWord(std::string word);
-
-private:
-  std::vector<std::string> fileNames; // List of files we've indexed
+struct SearchResult {
+    std::string fileName;
+    double score;
 };
 
-#endif
+class MiniSearch {
+public:
+    void loadDatasets(std::string path);
+    std::string cleanWord(std::string word);
+    void search(std::string query); // We'll add this today!
+
+private:
+    std::unordered_map<std::string, std::map<std::string, int>> invertedIndex;
+    int totalDocs = 0; // Track total files for IDF calculation
+};

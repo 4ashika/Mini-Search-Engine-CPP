@@ -1,39 +1,67 @@
 #include "minisearch.h"
-#include <iostream>
+#include <filesystem>
 #include <fstream>
+#include <iostream>
+#include <cctype>
 #include <algorithm>
+#include <vector>
 
 namespace fs = std::filesystem;
 
-std::string MiniSearch::cleanWord(std::string word)
-{
-  // Lowercase
-  std::transform(word.begin(), word.end(), word.begin(), ::tolower);
-  // Remove punctuation
-  word.erase(std::remove_if(word.begin(), word.end(), [](char c)
-                            { return !std::isalnum(c); }),
-             word.end());
-  return word;
+// Check for the MiniSearch:: prefix!
+std::string MiniSearch::cleanWord(std::string word) {
+    std::transform(word.begin(), word.end(), word.begin(), ::tolower);
+    word.erase(std::remove_if(word.begin(), word.end(), [](char c) {
+        return !std::isalnum(c);
+    }), word.end());
+    return word;
 }
 
-void MiniSearch::loadDatasets(std::string path)
-{
-  for (const auto &entry : fs::directory_iterator(path))
-  {
-    if (entry.is_regular_file())
-    {
-      fileNames.push_back(entry.path().string());
-      std::cout << "Detected: " << entry.path().filename() << std::endl;
+void MiniSearch::loadDatasets(std::string path) {
+    for (const auto& entry : fs::directory_iterator(path)) {
+        if (entry.is_regular_file()) {
+            totalDocs++;
+            
+            std::string fileName = entry.path().filename().string();
+            std::ifstream file(entry.path());
+            std::string word;
 
-      // For Day 1 test: Just open and print the first 5 words
-      std::ifstream file(entry.path());
-      std::string word;
-      int count = 0;
-      while (file >> word && count < 5)
-      {
-        std::cout << "  Word: " << cleanWord(word) << std::endl;
-        count++;
-      }
+            while (file >> word) {
+                std::string cleaned = cleanWord(word);
+                if (!cleaned.empty()) {
+                    // This increments the count for this word in this specific file
+                    invertedIndex[cleaned][fileName]++;
+                }
+            }
+        }
     }
-  }
+    std::cout << "Indexing complete! Total unique words: " << invertedIndex.size() << std::endl;
+}
+
+void MiniSearch::search(std::string query) {
+    std::string cleaned = cleanWord(query);
+    
+    if (invertedIndex.find(cleaned) == invertedIndex.end()) {
+        std::cout << "No results found." << std::endl;
+        return;
+    }
+
+    std::vector<SearchResult> results;
+    double idf = log((double)totalDocs / (double)invertedIndex[cleaned].size());
+
+    for (auto const& [file, count] : invertedIndex[cleaned]) {
+        // Simple TF-IDF score: (Count in this file) * (Rarity across all files)
+        double score = count * idf;
+        results.push_back({file, score});
+    }
+
+    // Sort results by score (descending)
+    std::sort(results.begin(), results.end(), [](const SearchResult& a, const SearchResult& b) {
+        return a.score > b.score;
+    });
+
+    std::cout << "\nRanked Results for '" << query << "':" << std::endl;
+    for (const auto& res : results) {
+        printf("- %-15s | Score: %.4f\n", res.fileName.c_str(), res.score);
+    }
 }
